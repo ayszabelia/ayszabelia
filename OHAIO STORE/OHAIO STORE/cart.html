@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>OHAIO Store</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="eCommerce HTML Template Free Download" name="keywords">
+        <meta content="eCommerce HTML Template Free Download" name="description">
+        <link href="img/favicon.ico" rel="icon">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="product-list.html" class="nav-item nav-link">Products</a>
+                            <a href="product-detail.html" class="nav-item nav-link">Product Detail</a>
+                            <a href="cart.html" class="nav-item nav-link active">Cart</a>
+                            <a href="checkout.html" class="nav-item nav-link">Checkout</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="index.html">
+                                    <style>
+                                        .logo {
+                                            width: 250px;
+                                            height: auto;
+                                        }
+                                    </style>
+                                    <img class="logo"src="img/logo.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <form action="product.html" method="get">
+                        <div class="search">
+                            <input type="text" placeholder="Search">
+                            <button><i class="fa fa-search"></i></button>
+                        </div>
+                        </form>
+                    </div>
+                        <a href="cart.html" class="btn cart">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>(0)</span>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb-wrap">
+            <div class="container-fluid">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                    <li class="breadcrumb-item active">Cart</li>
+                </ul>
+            </div>
+        </div>
+        <div class="cart-page">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="cart-page-inner">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                            <th>Total</th>
+                                            <th>Remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="align-middle">
+                                        <tr>
+                                            <td>
+                                                <div class="img">
+                                                    <a href="#"><img src="img/1.jpg" alt="Image"></a>
+                                                    <p>ADIDAS HOOPS</p>
+                                                </div>
+                                            </td>
+                                            <td>Rp 800.000</td>
+                                            <td>
+                                                <div class="qty">
+                                                    <input type="text" id="jumlah_sepatu_1" name="jumlah_sepatu_1" value="1" oninput="hitungSubtotal('jumlah_sepatu_1', 'subtotal_sepatu_1')">
+                                                </div>
+                                            </td>
+                                            <td id="subtotal_sepatu_1">Rp 800.000</td>
+                                            <td><button onclick="hapusItem(1)"><i class="fa fa-trash"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="img">
+                                                    <a href="#"><img src="img/2.jpg" alt="Image"></a>
+                                                    <p>OWALA FREESIP</p>
+                                                </div>
+                                            </td>
+                                            <td>Rp 100.000</td>
+                                            <td>
+                                                <div class="qty">
+                                                    <input type="text" id="jumlah_sepatu_2" name="jumlah_sepatu_2" value="1" oninput="hitungSubtotal('jumlah_sepatu_2', 'subtotal_sepatu_2')">
+                                                </div>
+                                            </td>
+                                            <td id="subtotal_sepatu_2">Rp 100.000</td>
+                                            <td><button onclick="hapusItem(2)"><i class="fa fa-trash"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="img">
+                                                    <a href="#"><img src="img/3.jpg" alt="Image"></a>
+                                                    <p>THE NORTH FACE VAULT</p>
+                                                </div>
+                                            </td>
+                                            <td>Rp 99.000</td>
+                                            <td>
+                                                <div class="qty">
+                                                    <input type="text" id="jumlah_sepatu_3" name="jumlah_sepatu_3" value="1" oninput="hitungSubtotal('jumlah_sepatu_3', 'subtotal_sepatu_3')">
+                                                </div>
+                                            </td>
+                                            <td id="subtotal_sepatu_3">Rp 99.000</td>
+                                            <td><button onclick="hapusItem(3)"><i class="fa fa-trash"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="img">
+                                                    <a href="#"><img src="img/4.jpg" alt="Image"></a>
+                                                    <p>THE NORTH FACE EASY WIND</p>
+                                                </div>
+                                            </td>
+                                            <td>Rp 400.000</td>
+                                            <td>
+                                                <div class="qty">
+                                                    <input type="text" id="jumlah_sepatu_4" name="jumlah_sepatu_4" value="1" oninput="hitungSubtotal('jumlah_sepatu_4', 'subtotal_sepatu_4')">
+                                                </div>
+                                            </td>
+                                            <td id="subtotal_sepatu_4">Rp 400.000</td>
+                                            <td><button onclick="hapusItem(4)"><i class="fa fa-trash"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="img">
+                                                    <a href="#"><img src="img/5.jpg" alt="Image"></a>
+                                                    <p>47 BRAND LOS ANGELES</p>
+                                                </div>
+                                            </td>
+                                            <td>Rp 230.000</td>
+                                            <td>
+                                                <div class="qty">
+                                                    <input type="text" id="jumlah_sepatu_5" name="jumlah_sepatu_5" value="1" oninput="hitungSubtotal('jumlah_sepatu_5', 'subtotal_sepatu_5')">
+                                                </div>
+                                            </td>
+                                            <td id="subtotal_sepatu_5">Rp 230.000</td>
+                                            <td><button onclick="hapusItem(5)"><i class="fa fa-trash"></i></button></td>
+                                        </tr>
+                                    </table>
+                                    <script>
+                                        function hitungSubtotal(inputId, subtotalId) {
+                                            var jumlah_sepatu = document.getElementById(inputId).value;
+                                            var harga_sepatu = getHargaSepatu(inputId);
+                                            var subtotal_sepatu = jumlah_sepatu * harga_sepatu;
+                                            document.getElementById(subtotalId).innerHTML = "Rp " + subtotal_sepatu;
+                                            hitungTotal();
+                                            }
+                                            function hitungTotal() {
+                                            var total = 0;
+                                            for (var i = 1; i <= 5; i++) {
+                                                var jumlah_sepatu = parseInt(document.getElementById("jumlah_sepatu_" + i).value);
+                                                var harga_sepatu = getHargaSepatu("jumlah_sepatu_" + i);
+                                                total += jumlah_sepatu * harga_sepatu;
+                                            }
+                                            document.getElementById("total").innerHTML = "Rp " + total;
+                                            simpanTotal(total);
+                                        }
+                                        function updateQuantity(amount, inputId) {
+                                            var jumlah_sepatu = parseInt(document.getElementById(inputId).value) + amount;
+                                            if (jumlah_sepatu >= 1) {
+                                                document.getElementById(inputId).value = jumlah_sepatu;
+                                                hitungSubtotal(inputId, 'subtotal_' + inputId);
+                                            }
+                                        }
+                                        function hapusItem(item) {
+                                            alert("Item " + item + " deleted!");
+                                        }
+                                        function simpanTotal(total) {
+                                            localStorage.setItem("total", total);
+                                        }
+                                        function getHargaSepatu(inputId) {
+                                            switch (inputId) {
+                                                case 'jumlah_sepatu_1':
+                                                    return 800000;
+                                                case 'jumlah_sepatu_2':
+                                                    return 100000;
+                                                case 'jumlah_sepatu_3':
+                                                    return 99000;
+                                                case 'jumlah_sepatu_4':
+                                                    return 400000;
+                                                case 'jumlah_sepatu_5':
+                                                    return 230000;
+                                                default:
+                                                    return 0;
+                                                }
+                                        }   
+                                        window.onload = hitungSubtotal;
+                                    </script>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cart-page-inner">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="coupon">
+                                        <input type="text" placeholder="masukkan kode">
+                                        <button>Voucher</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="cart-summary">
+                                        <div class="cart-content">
+                                            <h1>Keranjang</h1>
+                                            <p>SubTotal<span id="cart-subtotal">Rp 1.559.000</span></p>
+                                            
+                                            <h2>Total<span id="cart-total">Rp 1.559.000</span></h2>
+                                        </div>
+                                        <div class="cart-btn" >
+                                            <style>
+                                                .navbar-brand {
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    text-align: center;
+                                                }
+                                                .navbar-brand button {
+                                                }
+                                            </style>
+                                            
+                                            <a href="checkout.html" class="navbar-brand">
+                                                <button onclick="checkout()">Checkout</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    function hitungSubtotal(inputId, subtotalId) {
+                                        var jumlah_sepatu = document.getElementById(inputId).value;
+                                        var harga_sepatu = getHargaSepatu(inputId);
+                                        var subtotal_sepatu = jumlah_sepatu * harga_sepatu;
+                                        document.getElementById(subtotalId).innerHTML = "Rp " + subtotal_sepatu;
+                                        hitungTotal();
+                                    }
+                                    function hitungTotal() {
+                                        var total = 0;
+                                        for (var i = 1; i <= 5; i++) {
+                                            var jumlah_sepatu = parseInt(document.getElementById("jumlah_sepatu_" + i).value);
+                                            var harga_sepatu = getHargaSepatu("jumlah_sepatu_" + i);
+                                            total += jumlah_sepatu * harga_sepatu;
+                                        }
+                                        document.getElementById("cart-subtotal").innerHTML = "Rp " + total;
+                                        document.getElementById("cart-total").innerHTML = "Rp " + total;
+                                        simpanTotal(total);
+                                    }
+                                    function updateQuantity(amount, inputId) {
+                                        var jumlah_sepatu = parseInt(document.getElementById(inputId).value) + amount;
+                                        if (jumlah_sepatu >= 1) {
+                                            document.getElementById(inputId).value = jumlah_sepatu;
+                                            hitungSubtotal(inputId, 'subtotal_' + inputId);
+                                        }
+                                    }
+                                    function hapusItem(item) {
+                                        alert("Item " + item + " deleted!");
+                                    }
+                                    function simpanTotal(total) {
+                                        localStorage.setItem("total", total);
+                                    }
+                                    function getHargaSepatu(inputId) {
+                                        switch (inputId) {
+                                            case 'jumlah_sepatu_1':
+                                                return 800000;
+                                            case 'jumlah_sepatu_2':
+                                                return 100000;
+                                            case 'jumlah_sepatu_3':
+                                                return 99000;
+                                            case 'jumlah_sepatu_4':
+                                                return 400000;
+                                            case 'jumlah_sepatu_5':
+                                                return 230000;
+                                            default:
+                                                return 0;
+                                        }
+                                    }
+                                    function updateCart() {
+                                        alert("Keranjang Diperbarui!");
+                                    }
+                                    function checkout() {
+                                        alert("Proses Ke Checkout!");
+                                    }
+                                    window.onload = hitungSubtotal;
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Contact Us</h2>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>138 OHAIO STORE, INDONESIA</p>
+                                <p><i class="fa fa-envelope"></i>ohaiostore@gmail.com</p>
+                                <p><i class="fa fa-phone"></i>+123-456-7890</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Follow Us</h2>
+                            <div class="contact-info">
+                                <div class="social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Company Info</h2>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Purchase Info</h2>
+                            <ul>
+                                <li><a href="#">Payment Policy</a></li>
+                                <li><a href="#">Shipping Policy</a></li>
+                                <li><a href="#">Return Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row payment align-items-center">
+                    <div class="col-md-6">
+                        <div class="payment-method">
+                            <h2>We Accept:</h2>
+                            <img src="img/payment-method.png" alt="Payment Method" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="payment-security">
+                            <h2>Secured By:</h2>
+                            <img src="img/godaddy.svg" alt="Payment Security" />
+                            <img src="img/norton.svg" alt="Payment Security" />
+                            <img src="img/ssl.svg" alt="Payment Security" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 copyright">
+                        <p>Copyright &copy; <a href="https://htmlcodex.com">OHAIO STORE</a>. All Rights Reserved</p>
+                    </div>
+            </div>
+        </div>
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
